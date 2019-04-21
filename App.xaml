@@ -1,0 +1,24 @@
+﻿<Application
+    x:Class="LoveAnim.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LoveAnim"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <DataTemplate x:Key="listViewDataTemplate">
+            <StackPanel Orientation="Vertical" Padding="6" BorderBrush="#EEE" BorderThickness="0 0 0 1">
+                <TextBlock x:Uid="titleText" Text="{Binding Title}" Foreground="#333" TextWrapping="Wrap" Margin="0 0 0 6" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Uid="miniText" Text="{Binding PublishTime}" />
+                    <TextBlock x:Uid="miniText" Text="{Binding FileSize}" />
+                    <TextBlock x:Uid="miniText" Text="{Binding PublishUP}" />
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+
+
+        <Style x:Key="listViewContainerStyle" TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment"  Value="Stretch"/>
+        </Style>
+    </Application.Resources>
+</Application>

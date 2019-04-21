@@ -1,0 +1,44 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="LoveAnim.Views.ItemDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LoveAnim.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:LoveAnim.ViewModels"
+    xmlns:controls="using:LoveAnim.Controls"
+    mc:Ignorable="d"
+    NavigationCacheMode="Required">
+    <Page.Resources>
+        
+    </Page.Resources>
+    <Page.DataContext>
+        <vm:ItemDetailViewModel/>
+    </Page.DataContext>
+
+    <Grid x:ConnectionId='2' Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                     >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:ConnectionId='3' Grid.RowSpan="2" x:Name="background"/>
+        <StackPanel Padding="10">
+            <TextBlock Text="{Binding Item.Title}" FontSize="24" Foreground="#333" TextWrapping="Wrap" Margin="0 0 0 10"/>
+            <RelativePanel>
+                <TextBlock x:ConnectionId='6' x:Name="time" RelativePanel.AlignLeftWithPanel="True" x:Uid="miniText" Text="{Binding Item.PublishTime}"/>
+                <TextBlock RelativePanel.AlignRightWithPanel="True" x:Uid="miniText" Text="{Binding Item.PublishUP}" HorizontalAlignment="Right"/>
+                <controls:HAppBarButton x:ConnectionId='7' Margin="0 10 10 10" x:Uid="hAppBar" x:Name="seedDownload" RelativePanel.Below="time" Icon="Download" Label="下载种子"                                           />
+                <controls:HAppBarButton x:ConnectionId='8' Margin="0 10 0 10" x:Uid="hAppBar" RelativePanel.RightOf="seedDownload" RelativePanel.Below="time" Label="复制链接" Icon="Copy"                                              />
+            </RelativePanel>
+        </StackPanel>
+        <Pivot Grid.Row="1" BorderThickness="0 0 0 1">
+            <PivotItem Header="简介">
+                <WebView x:ConnectionId='5' x:Name="infoWebView"/>
+            </PivotItem>
+            <PivotItem Header="文件">
+                <WebView x:ConnectionId='4' x:Name="fileWebView"/>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
+

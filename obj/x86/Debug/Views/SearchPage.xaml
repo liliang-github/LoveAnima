@@ -1,0 +1,42 @@
+﻿<Page x:ConnectionId='1' xmlns:UserControls="using:LoveAnim.UserControls" 
+    x:Class="LoveAnim.Views.SearchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LoveAnim.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:LoveAnim.ViewModels"
+    mc:Ignorable="d"
+    NavigationCacheMode="Required">
+    <Page.DataContext>
+        <vm:SearchPageViewModel />
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <AutoSuggestBox x:ConnectionId='2' x:Name="search" x:Uid="searchBox"
+                        Text="{Binding SearchText,Mode=TwoWay}"
+                        QueryIcon="Find"
+                                                              
+                        />
+        <ListView x:ConnectionId='3' Grid.Row="1"
+                  ItemsSource="{Binding Items}"
+                  ItemTemplate="{StaticResource listViewDataTemplate}"
+                  ItemContainerStyle="{StaticResource listViewContainerStyle}"
+                  IsItemClickEnabled="True"
+                                                >
+
+        </ListView>
+        <UserControls:Toast x:ConnectionId='4' Grid.Row="1" Text="无搜索结果"                                                 />
+        <ProgressRing Grid.Row="2"
+                      Width="40"
+                      Height="40"
+                      IsActive="{Binding IsLoading}"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"/>
+    </Grid>
+</Page>
+
