@@ -16,7 +16,6 @@
             </StackPanel>
         </DataTemplate>
 
-
         <Style x:Key="listViewContainerStyle" TargetType="ListViewItem">
             <Setter Property="HorizontalContentAlignment"  Value="Stretch"/>
         </Style>
