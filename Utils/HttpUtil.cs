@@ -38,6 +38,10 @@ namespace LoveAnim.Utils
                     ////httpClient.DefaultRequestHeaders.Cookie.Add(new HttpCookiePairHeaderValue("__cfduid", "d8fbd02b8b8977496360fb0bf5c64120b1552633926"));
                     ////httpClient.DefaultRequestHeaders.Cookie.Add(new HttpCookiePairHeaderValue("cf_clearance", "808d5662d9cd960b594cd8eaa983acc4555d7945-1552739397-1800-150"));
                     httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; WOW64; WebView/3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134");
+                    httpClient.DefaultRequestHeaders.Accept.ParseAdd("text/html, application/xhtml+xml, application/xml; q=0.9, */*; q=0.8");
+                    httpClient.DefaultRequestHeaders.AcceptLanguage.ParseAdd("zh-Hans-CN, zh-Hans; q=0.5");
+                    httpClient.DefaultRequestHeaders.CacheControl.ParseAdd("max-age=0");
+                    httpClient.DefaultRequestHeaders.Add("DNT", "max-age=0");
                     ////httpClient.DefaultRequestHeaders.Add("Upgrade-Insecure-Requests", "1");
                     string result = await httpClient.GetStringAsync(new Uri(url));
                     return result;

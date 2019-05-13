@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\C\win10\LoveAnim\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-16T17:33:01.537</Modified>
+      <Modified>2019-05-13T09:49:58.054</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\C\win10\LoveAnim\bin\x86\Debug\LoveAnim.exe">
       <PackagePath>entrypoint\LoveAnim.exe</PackagePath>
-      <Modified>2019-03-16T17:33:00.550</Modified>
+      <Modified>2019-05-13T09:49:55.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lilia\.nuget\packages\htmlagilitypack\1.9.2\lib\uap10.0\HtmlAgilityPack.dll">
       <PackagePath>HtmlAgilityPack.dll</PackagePath>
@@ -580,11 +580,11 @@
     <AppxPackagedFile Include="D:\C\win10\LoveAnim\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-16T17:33:01.187</Modified>
+      <Modified>2019-05-13T09:49:57.414</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C\win10\LoveAnim\bin\x86\Debug\Core\LoveAnim.exe">
       <PackagePath>LoveAnim.exe</PackagePath>
-      <Modified>2019-03-16T17:33:01.527</Modified>
+      <Modified>2019-05-13T09:49:58.044</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
